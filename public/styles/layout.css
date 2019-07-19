@@ -6,9 +6,7 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+
 
 /*
  * Global layout stuff
@@ -18,8 +16,122 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+.bottomTweet {
+  display: flex;
+  justify-content: space-between;
+  border-style: none;
+}
+
+.specificTweet {
+  width: 100%;
+  border-style: solid;
+}
+
+.profiling {
+  display: flex;
+  justify-content: top;
+}
+
+.bodyTweet {
+  border-bottom: solid;
+  padding: 0%;
+  margin-left: 0%;
+  width: 100;
+}
+
+.specificTweet:hover {
+  box-shadow: 10px 5px lightblue;
+
+}
+
+.specificTweet:hover #smallButtons {
+  display: block;
+}
+
+
+.atID {
+  display: none;
+}
+
+.specificTweet:hover .atID {
+  display: block;
+}
+
+/* .atID:hover {
+  display: block;
+} */
+
+
+div#hiddenError1 {
+  display: none;
+  color: red;
+  border: solid;
+}
+
+div#hiddenError2 {
+  display: none;
+  color: red;
+  border: solid;
+}
+
+@media (min-width: 1000px) {
+
+  #mainBody {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #imageProfiling {
+    height: 20vw;
+    margin: 5%;
+    width: auto;
+  }
+
+  main {
+    width: 90%;
+    background-color: inherit;
+    padding-top: 150px;
+    margin: 0 auto;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  #mainBody {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  #mainContent {
+    width: 100%;
+
+  }
+
+  #imageProfiling {
+    max-width: auto;
+    height: 100px;
+    margin: 1%;
+  }
+}
+
+.mainProfilePicture {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+#nameShower {
+  max-height: 100%;
+  margin: 0;
+  font-size: 3vw;
+}
+
+#smallButtons {
+  display: none;
+}

@@ -7,26 +7,71 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <!-- This is embeded from the exercise-->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!-- My customization part -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/design.js"></script>
+
+
   </head>
 
   <body>
 
-    <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="titleTweeter">tweeter</span>
+      <div style="width: 20vw;">
+        <form  class="quickSlider" style="width: 100%;" >
+          <div class="wirteANewTweet"><span id="write">Write </span><span id="aNewTweet">a new tweet</span></div>
+        <img id="bouncingArrow" alt="bouncing arrow" src="/images/clipart531754.png">
+        </form>
+      </div>
     </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
+    <main>
+      <div id="mainBody">
 
+      <header class="navHeader">
+        <img id="imageProfiling" src="/images/profile-hex.png"/> 
+        <h2 id="nameShower">Viet-Nhien Tran Duc</h2>
+        <br>
+      </header>
+
+      <div id="mainContent" style="margin: 5%; width: 90%;">
+
+      <section class="new-tweet">
+        <div id="hiddenError1">
+          The field is empty
+        </div>
+        <div id="hiddenError2">
+          Too long
+        </div>
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets" id="newPost">
+          <textarea id="inserted" class="textbox" name="text" style = "border-bottom: solid black" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class = "wordCounter" class="counter" >140</span>
+        </form>
+      </section>
+
+      <br>
+      <div id="tweets-container"></div>
+      </div>
+    </div>
+    </main>
   </body>
 </html>

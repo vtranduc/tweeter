@@ -1,0 +1,28 @@
+@media (min-width: 1000px) {
+  header.navHeader {
+    height: 30vw;
+    width: 30vw;
+    background-color: orange;
+    text-align: center;
+    background-image: url("../images/black-paper.png");
+    margin: 1%;
+  }
+}
+
+@media (max-width: 1000px) {
+  header.navHeader {
+    /* height: 20vh; */
+    width: 100%;
+    background-color: orange;
+    text-align: center;
+    background-image: url("../images/black-paper.png");
+    /* margin: 0%; */
+  }
+}
+
+.titleTweeter {
+  display: flex;
+  align-items: center;
+  margin: 2%;
+  font-size: 4vw;
+}

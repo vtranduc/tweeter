@@ -1,0 +1,82 @@
+@media (min-width: 1000px) {
+
+  nav {
+    
+    background-color: #4056A1;
+    /* position: fixed; */
+  }
+
+  
+}
+
+@media (max-width: 1000px) {
+  nav {
+    background-color: transparent;
+    /* position: static; */
+  }
+  /* #write {
+    font-size: 0.8em;
+  }
+  
+  #aNewTweet {
+    font-size: 0.7em;
+    font-family: sans-serif;
+  } */
+}
+
+nav {
+  height: 120px;
+    width: 100%;
+    z-index: 5;
+    margin: 1.5ems;
+    font-family: 'Bungee', cursive;
+    color: #FFFFFF;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+
+#write {
+  font-size: 1.5vw;
+}
+
+#aNewTweet {
+  font-size: 1.3vw;
+  font-family: sans-serif;
+}
+
+.writeANewTweet {
+  display: inline-block;
+}
+
+.quickSlider {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  height: auto;
+  width: 20em;
+}
+
+
+
+#bouncingArrow {
+  max-width: 10%;
+  height: auto;
+  animation-name: bouncyArrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bouncyArrow {
+  0% {transform: translate(0px, 0px);}
+  50% {transform: translate(0px, 10px);}
+  100% {transform: translate(0px, 0px);}
+}
+
+/* @keyframes bouncyArrow {
+  0% {max-width: 5%;}
+  50% {max-width: 50%;}
+  100% {max-width: 5%;}
+} */
