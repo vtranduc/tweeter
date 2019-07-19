@@ -12,6 +12,7 @@ const loadTweet = function() {
   }).success(function(data) {
     $('#tweets-container').empty();
     renderTweets(data);
+    $('.new-tweet').slideToggle();
   }).fail(function() {
   })
 }
